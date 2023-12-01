@@ -1,0 +1,8 @@
+$color:#d3e2e8;
+
+body{
+    // 全局背景
+    background-color: $color;
+    // 取消文字选中
+    user-select: none;
+}
