@@ -5,7 +5,7 @@ import "reset-css"
 // UI框架样式引入
 
 // 全局样式
-import "./assets/styles/global.scss"
+import "@/assets/styles/global.scss"
 // 组件样式引入
 import App from './App'
 

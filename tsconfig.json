@@ -5,9 +5,19 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*":[
+        "src/*"
+      ]
+    },
+    // 启用编译器选项“forcecconsistentcasinginfilename”，以减少在不同操作系统下工作时出现的问题。
+    "forceConsistentCasingInFileNames": true,
+    // index.d.ts(32, 1): 此模块是使用 “export =” 声明
+    "allowSyntheticDefaultImports": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,

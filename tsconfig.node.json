@@ -3,8 +3,12 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    // 启用编译器选项“forcecconsistentcasinginfilename”，以减少在不同操作系统下工作时出现的问题。
+    "forceConsistentCasingInFileNames": true,
+    // 启用编译器选项“strict”以减少类型错误。
+    "strict": true
   },
   "include": ["vite.config.ts"]
 }
