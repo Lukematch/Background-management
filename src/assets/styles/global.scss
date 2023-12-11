@@ -12,3 +12,15 @@ img{
     // 禁止图片拖动
     -webkit-user-drag: none;
 }
+
+// 首页的全局样式
+.logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255,255,255,0.3);
+    border-radius:1ch
+}
+
+.site-layout .site-layout-background {
+    background: #94a0a2;
+}
