@@ -1,6 +1,7 @@
 // import App from "@/App";
 import { lazy , Suspense } from "react";
 import View from "@/views/View";
+import Login from "@/views/Login/index"
 // import About from "@/views/About";
 // import User from "@/views/User";
 
@@ -10,6 +11,12 @@ const About = lazy(()=>import("@/views/About"))
 const User = lazy(()=>import("@/views/User"))
 const Page1 = lazy(()=>import("@/views/Page1"))
 const Page2 = lazy(()=>import("@/views/Page2"))
+const User1 = lazy(()=>import("@/views/User1"))
+const User2 = lazy(()=>import("@/views/User2"))
+const User3 = lazy(()=>import("@/views/User3"))
+const Team = lazy(()=>import("@/views/Team"))
+const Team1 = lazy(()=>import("@/views/Team1"))
+const Team2 = lazy(()=>import("@/views/Team2"))
 // import { Routes , BrowserRouter , Route , Navigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
@@ -42,7 +49,7 @@ const withLoadingComponent = (comp:JSX.Element) => (
 const routes = [
     {
         path:"/",
-        element:<Navigate to="/page1" />
+        element:<Navigate to="/login" />
     },
     {
         path:"/",
@@ -57,16 +64,44 @@ const routes = [
                 element: withLoadingComponent(<Page2/>)
             },
             {
+                path:"/user",
+                element: withLoadingComponent(<User/>)
+            },
+            {
+                path:"/user/user1",
+                element: withLoadingComponent(<User1/>)
+            },
+            {
+                path:"/user/user2",
+                element: withLoadingComponent(<User2/>)
+            },
+            {
+                path:"/user/user3",
+                element: withLoadingComponent(<User3/>)
+            },
+            {
+                path:"/team",
+                element: withLoadingComponent(<Team/>)
+            },
+            {
+                path:"team/team1",
+                element: withLoadingComponent(<Team1/>)
+            },
+            {
+                path:"team/team2",
+                element: withLoadingComponent(<Team2/>)
+            },
+            {
                 path:"/about",
                 element: withLoadingComponent(<About/>)
             },
         ]
     },
-
     {
-        path:"/user",
-        element: withLoadingComponent(<User/>)
+        path:"*",
+        element:<Login/>
     },
+
 ]
 
 export default routes

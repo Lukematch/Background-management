@@ -1,0 +1,40 @@
+.loginbox{
+    .ant-input , .ant-input-password{
+        background-color: rgba(255,255,255,0);
+        border-color:rgb(138, 202, 198);
+        color:#fff;
+    }
+    .ant-input-password{
+        margin: 0 auto;
+        .ant-input{
+            display: flex;
+        }
+        .ant-input:focus{
+            border-style: none;
+        }
+        .ant-input-suffix{
+            height: auto
+        }
+    }
+    .ant-input:focus , .ant-input-password:focus {
+        border-style:solid;
+        border-color: #03a9f4;
+        box-shadow: 0 0 15px #03a9f4;
+    }
+    .anticon.ant-input-password-icon{
+        color: rgb(138, 202, 198);
+    }
+    .ant-input::placeholder {
+        color: #ccc;
+    }
+    .ant-btn{
+        background: rgb(138, 202, 198);
+    }
+    // 验证码盒子
+    .captchaBox {
+        display: flex;
+        img{
+            margin-left: 10px
+        }
+    }
+}
